@@ -31,8 +31,8 @@ class TaiKhoanController:
 
         except ValueError as e:
             raise HTTPException(
-                ma_loi=status.HTTP_400_BAD_REQUEST,
-                chi_tiet=str(e)
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=str(e)
             )
     def dang_nhap(self , request : DangNhapRequset ) -> DangNhapResponse:
         try:
@@ -45,6 +45,6 @@ class TaiKhoanController:
             )
         except ValueError as e:
             raise HTTPException(
-                ma_loi=status.HTTP_400_BAD_REQUEST,
-                chi_tiet=str(e)
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail=str(e)
             )
