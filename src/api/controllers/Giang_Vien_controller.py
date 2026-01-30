@@ -1,1 +1,1 @@
-from api.schemas.requests.Giang_Vien import GiangVienRequest
+from api.schemas.requests.Giang_Vien
