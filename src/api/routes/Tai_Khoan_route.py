@@ -26,8 +26,8 @@ def get_tai_khoan_controller():
     )
 
 
-@router.post("/dang_ky", response_model = DangKiResponse , status_code=201 )
-def dang_ky(
+@router.post("/dang_ki", response_model = DangKiResponse , status_code=201 )
+def dang_ki(
         dang_ki : DangKiRequest, # ngầm đọc body và validate dữ liệu
         controller : TaiKhoanController = Depends(get_tai_khoan_controller)
     ):
